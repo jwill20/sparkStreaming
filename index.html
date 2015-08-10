@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { background-color:lightblue}
+#title {color:darkblue;
+      position: absolute;
+	  display: block;
+	  top: 155px;
+	  left: 210px;
+	  font-size: 18px;
+	  font-weight: bold;}
+p    {color:green}
+
+#topMenuBar{
+	position: absolute;
+	display: block;
+	color: green;
+	background: -moz-linear-gradient(top,#000077,#0000dd); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000077', endColorstr='#0000DD'); /* for IE */
+	top: 0px;
+	left: 20px;
+	width: 980px;
+	height: 54px;
+	z-index: 100;
+	}
+
+#topMenuBarItems{
+	position: absolute;
+	top: 4px;
+	left: 30px;
+	font-family: Helvetica;
+	color: #254117; 
+	font-size: 11px;
+	font-weight: bold;
+	width: 580px;
+	}
+#logoText {
+	position: absolute;
+	display: block;
+	color: white;
+	width: 480px;
+	height: 380px;
+	top: 10px;
+	left: 2px;
+	font-family: Helvetica;
+	font-size: 20px;
+	}
+#tabBar {
+	position: absolute;
+	display: block;
+	top: 30px;
+	left: 560px;
+	width: 500px;
+	height: 6px;
+	z-index: 100;
+	}
+
+#menu1, #menu2, #menu3, #menu4{
+	position: absolute;
+	top: 4px;
+	text-align: center;
+	vertical-align: middle;
+	border-right-style: solid;
+	border-right-width: 0px;
+	border-top-style: solid;
+	border-top-width: 0px;
+	border-color: #330011;
+	width: 100px;
+	height: 20px;
+	background-color: #7080cc;
+	-moz-border-radius: 5px 5px 0px 0px;
+}
+
+#menu1Text, #menu2Text, #menu3Text, #menu4Text{
+	position: absolute;
+	font-size: 12px;
+	font-family: Helvetica;
+	font-style: bold; 
+	color: white;
+}
+
+#menu1 { 	display: block;	left: 10px;	background-color: #d9d9d9;	}
+#menu1Text {	top: 3px;	left: 24px;	color: black;	}	
+
+#menu2 {	display: block;	left: 112px;	}
+#menu2Text {	top: 3px;	left: 30px;	}	
+
+#menu3 {	display: block;	left: 214px;	}
+#menu3Text {	top: 3px;	left: 28px;	}	
+
+#menu4 {	display: block;	left: 316px;	}
+#menu4Text {	top: 3px;	left: 20px;	}	
+
+#supplements
+{
+	position: absolute;
+	display: block;
+	color: blue;
+	width: 400px;
+	height: 380px;
+	top: 150px;
+	left: 120px;
+	font-family: Helvetica;
+	font-size: 18px;
+}
+#aconiteStyle, #bitterOrangeStyle, #chaparralStyle, #colloidalStyle, #coltsfootStyle, #comfreyStyle,
+#countryMallowStyle, #germaniumStyle, #kavaStyle, #lobeliaStyle, #yohimbeStyle, #ginkoStyle
+{
+	position: absolute;
+	display: block;
+	border: solid;
+	border-color: blue;
+	background: -moz-linear-gradient(bottom,lightgrey, white);
+	//background-color:lightgreen;
+	//background-color:lightgrey;
+}
+
+#aconiteStyle
+{	top: 50px; left: 0px; width: 185px; }
+#bitterOrangeStyle 
+{	top: 50px; left: 200px; width: 185px;}
+#chaparralStyle
+{ 	top: 50px; left: 400px; width: 185px;}
+#colloidalStyle
+{	top: 50px; left: 600px; width: 185px;}
+#coltsfootStyle
+{	top: 130px;	left: 0px; width: 185px;}
+#comfreyStyle
+{	top: 130px;	left: 200px; width: 185px;}
+#countryMallowStyle
+{	top: 130px;	left: 400px; width: 185px;}
+#germaniumStyle
+{	top: 130px;	left: 600px; width: 185px;}
+#kavaStyle
+{	top: 210px;	left: 0px; width: 185px;}
+#lobeliaStyle
+{	top: 210px;	left: 200px; width: 185px;}
+#yohimbeStyle
+{	top: 210px;	left: 400px; width: 185px;}
+#ginkoStyle
+{	top: 210px;	left: 600px; width: 185px;}
+
+#wxsStatusClearButton {
+	position: absolute;
+	display: block;
+	top: 450px;
+	left: 375px;
+	font-family: Helvetica;
+	color: #254117;
+	font-size: 18px;
+	}
+
+#wxsStatusButton {
+	position: absolute;
+	display: block;
+	top: 450px;
+	left: 540px;
+	font-family: Helvetica;
+	color: #254117;
+	font-size: 18px;
+	}
+
+#bottomBar{
+	position: absolute;
+	display: block;
+	color: green;
+	background: -moz-linear-gradient(top,#000077,#0000dd); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000077', endColorstr='#0000DD'); /* for IE */
+	top: 800px;
+	left: 20px;
+	width: 980px;
+	height: 54px;
+	z-index: 100;
+	}
+
+#bottomBarItems{
+	position: absolute;
+	top: 4px;
+	left: 30px;
+	font-family: Helvetica;
+	color: #254117; 
+	font-size: 11px;
+	font-weight: bold;
+	width: 580px;
+	}
+#bottomText {
+	position: absolute;
+	display: block;
+	color: white;
+	width: 480px;
+	height: 380px;
+	top: 10px;
+	left: 700px;
+	font-family: Helvetica;
+	font-size: 10px;
+	}
+	
+	#bottomText2 {
+	position: absolute;
+	display: block;
+	color: white;
+	width: 480px;
+	height: 380px;
+	top: 10px;
+	left: 0px;
+	font-family: Helvetica;
+	font-size: 10px;
+	}
+	
+</style>
+</head>
+<body>
+   <div id="title">Negative Sentiment Count for Monitored Dietary Supplements</div>
+<script>
+
+var ws = new WebSocket("ws://localhost:8901/");
+
+ws.onopen = function() 
+{
+    //alert("Browser:onopen => Opened!");
+    //ws.send("Hello Server");
+};
+
+ws.onmessage = function (evt) 
+{
+    var input = evt.data
+    var colon = input.indexOf(":");
+    var supplement = input.substr(0,colon);
+    var value = input.substr(colon+1);
+    
+    switch(supplement)
+    {
+       case "aconite":       document.getElementById("aconite").value       = value;
+       case "bitterOrange":  document.getElementById("bitterOrange").value  = value;
+       case "chaparral":     document.getElementById("chaparral").value     = value;   
+       case "colloidal":     document.getElementById("colloidal").value     = value;
+       case "coltsfoot":     document.getElementById("coltsfoot").value     = value;
+       case "comfrey":       document.getElementById("comfrey").value       = value;
+       case "countryMallow": document.getElementById("countryMallow").value = value;
+       case "germanium":     document.getElementById("germanium").value     = value;
+       case "kava":          document.getElementById("kava").value          = value; 
+       case "lobelia":       document.getElementById("lobelia").value       = value;
+       case "yohimbe":       document.getElementById("yohimbe").value       = value;
+       case "gingko":        document.getElementById("ginko").value         = value;
+     } 
+     
+};
+
+ws.onclose = function() 
+{
+    //alert("Browser:onclose => Closed!");
+};
+
+ws.onerror = function(err) 
+{
+    //alert("Browser:onerror => Error: " + err);
+};        
+</script>
+
+  <div id="topMenuBar">
+      <div id="topMenuBarItems">
+         <div id="logoText">Unregulated Dietary Supplements Monitor</div>
+      </div>
+    </div>
+
+    <div id="tabBar">
+       <div id="menu1" onclick="toggleMenu(1)" onmouseover="togChoiceOn(1)" onmouseout="togChoiceOff(1)">
+         <div id="menu1Text">Negative</div>
+       </div>
+
+       <div id="menu2" onclick="toggleMenu(2)" onmouseover="togChoiceOn(2)" onmouseout="togChoiceOff(2)">
+         <div id="menu2Text">Positive</div>
+       </div>
+
+       <div id="menu3" onclick="toggleMenu(3)" onmouseover="togChoiceOn(3)" onmouseout="togChoiceOff(3)" >
+         <div id="menu3Text">Neutral</div>
+       </div>
+
+       <div id="menu4" onclick="toggleMenu(4)" onmouseover="togChoiceOn(4)" onmouseout="togChoiceOff(4)">
+         <div id="menu4Text">Error Rate</div>
+       </div>
+    </div>
+
+
+      <div id="supplements">
+      <div id="aconiteStyle">&nbsp;
+      Aconite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type=text id="aconite" size="2" value="0"></br></br>
+      </div>   
+      <div id="bitterOrangeStyle">&nbsp;
+      Bitter Orange&nbsp;&nbsp;
+         <input type=text id="bitterOrange" size="2" value="0"></br></br>
+      </div>
+      <div id="chaparralStyle">&nbsp;
+      Chaparral&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type=text id="chaparral" size="2" value="0"></br></br>
+      </div>
+      <div id="colloidalStyle">&nbsp;
+      Colloidal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type=text id="colloidal" size="2" value="0"></br></br>
+      </div>
+      <div id="coltsfootStyle">&nbsp;
+      Coltsfoot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type=text id="coltsfoot" size="2" value="0"></br></br>
+      </div>
+      <div id="comfreyStyle">&nbsp;
+      Comfrey&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type=text id="comfrey" size="2" value="0"></br></br>
+      </div>
+      <div id="countryMallowStyle">&nbsp;
+      Country Mallow
+         <input type=text id="countryMallow" size="2" value="0"></br></br>
+      </div>
+      <div id="germaniumStyle">&nbsp;
+      Germanium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type=text id="germanium" size="2" value="0"></br></br>
+      </div>
+      <div id="kavaStyle">&nbsp;
+      Kava&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type=text id="kava" size="2" value="0"></br></br>
+      </div>
+      <div id="lobeliaStyle">&nbsp;
+      Lobelia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type=text id="lobelia" size="2" value="0"></br></br>
+      </div>
+      <div id="yohimbeStyle">&nbsp;
+      Yohimbe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type=text id="yohimbe" size="2" value="0"></br></br>
+      </div>
+      <div id="ginkoStyle">&nbsp;
+         Ginkgo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type=text id="ginko" size="2" value="0"></br></br>
+      </div>
+      </div>  
+      
+      <div id="wxsStatusClearButton">
+         <input type="submit" value="Clear Counters" border="0">
+      </div>
+       <div id="wxsStatusButton">
+         <input type="submit" value="Get Rate Status" border="0">
+      </div>
+      
+        <div id="bottomBar">
+      <div id="bottomBarItems">
+         <div id="bottomText">National Association of Nutrition and Dietetics</div>
+         <div id="bottomText2">Site Map&nbsp;&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;&nbsp;Privacy Policy</div>
+      </div>
+    </div>
+       
+    </body>
+</html>
+	
+	
+	
+						
